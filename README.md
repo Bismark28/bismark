@@ -24,7 +24,7 @@ This readMe file includes explanations of the following:
 * Path planning simulation
 * Path planning with real arm
 * Running and testing my code.
-* how to change the parameters of my code to make sure it was working up to its task.
+* changing the parameters of my code to make sure it was working up to its task.
 * Results obtained.
 * Problems encountered.
 * Suggested improvements
@@ -91,7 +91,31 @@ After planning the movement of the turtlebot using simulation, we then compared 
 
 ## Running and testing my code.
 
+my codes are in my repository but some of the necessary codes in my project would be shown here.
+The necessary codes operate on the gripper and the motors of the servos of turtlebot arm. These codes help the turtlebot arm to be able to caliberate well to pick a cube and place it on the turtlebot. 
 
+
+ ~~~python code
+ 
+  table_pose = PoseStamped()ffe
+        table_pose.header.frame_id = REFERENCE_FRAME
+        table_pose.pose.position.x = 0.36
+        table_pose.pose.position.y = 0.0
+        table_pose.pose.position.z = (table_ground + table_size[2] / 2.0)-0.081
+table_pose.pose.orientation.w = 1.0
+~~~
+
+This code helps to adjust the table pose position with respect to the turtlebot arm. it helps the turtlebort arm's gripper to be able to reach on the surface of the table where the cube is placed and picks it.
+
+
+After turtlebot arm has been able to reach on the surface of the table, the gripper has to pick the cube and place it on the turtlebot. The gripper can be able to pick the cube effectively only by adjusting the length, width and height of the cube with respect to the gripper.
+
+
+### The dimension of the target box
+
+~~~python code
+  target_size = [0.05, 0.015, 0.03]
+~~~
 
 
 
