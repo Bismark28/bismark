@@ -200,9 +200,9 @@ In this project, we were able to implement the expected scenario where the ***tu
 
 ## References
 
-*ROS official website
-*Turtlebot Arm PhatomX Pincher with ROS
-*Youtube
+* ROS official website
+* Turtlebot Arm PhatomX Pincher with ROS
+* Youtube
 
 
 
